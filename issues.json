@@ -1,0 +1,142 @@
+[
+  {
+    "id": "H-01",
+    "title": "Setup Dev Environment & Core Libraries (Audio, UI)",
+    "description": "Set up the chosen development framework (e.g., Python/PyQt, Electron/JS) and install necessary libraries for audio input/output and basic UI. Ensure all team members have a running base environment.",
+    "labels": ["setup", "critical", "priority:critical", "dependencies"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Critical",
+    "estimate_hours": 1.5
+  },
+  {
+    "id": "H-02",
+    "title": "Create Basic UI Window Shell",
+    "description": "Create the main application window using the chosen UI framework. Include placeholders for status display and a Start/Stop button. No complex layout needed yet.",
+    "labels": ["core-loop", "ui", "critical", "priority:critical"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Critical",
+    "estimate_hours": 0.5
+  },
+  {
+    "id": "H-03",
+    "title": "Implement Basic Audio Input (Listen to Microphone)",
+    "description": "Write code to access the default system microphone, capture the audio stream continuously when activated. Optionally, display a basic volume level/meter in the UI.",
+    "labels": ["core-loop", "audio", "critical", "priority:critical"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Critical",
+    "estimate_hours": 1.5
+  },
+  {
+    "id": "H-04",
+    "title": "Implement Basic Audio Output (Play Sound File)",
+    "description": "Create a function or method capable of playing a specific audio file (e.g., WAV, MP3) through the default system speakers.",
+    "labels": ["core-loop", "audio", "critical", "priority:critical"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Critical",
+    "estimate_hours": 1.0
+  },
+  {
+    "id": "H-05",
+    "title": "Implement *Simplified* Mood Detection Logic",
+    "description": "Hackathon Focus: Implement a very basic rule-based system to classify audio input. Example: If average volume over X seconds exceeds threshold Y, classify as 'Crying'. If below threshold Z, classify as 'Calm'. Alternatively, create mock logic that cycles through states for demo purposes.",
+    "labels": ["core-loop", "ai", "logic", "critical", "priority:critical"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Critical",
+    "estimate_hours": 2.0
+  },
+  {
+    "id": "H-06",
+    "title": "Connect Detection to Playback (Core Logic)",
+    "description": "Wire the output of the detection logic (H-05) to the audio playback function (H-04). When 'Crying' is detected, trigger playback of the pre-defined soothing sound. When 'Calm' is detected, stop playback.",
+    "labels": ["core-loop", "integration", "logic", "critical", "priority:critical"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Critical",
+    "estimate_hours": 1.0
+  },
+  {
+    "id": "H-07",
+    "title": "Implement Start/Stop Button Functionality",
+    "description": "Connect the Start/Stop button in the UI (H-02) to activate/deactivate the audio input (H-03) and the processing loop (detection H-05 -> playback H-06).",
+    "labels": ["core-loop", "ui", "integration", "critical", "priority:critical"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Critical",
+    "estimate_hours": 0.5
+  },
+  {
+    "id": "H-08",
+    "title": "Display Basic Status in UI",
+    "description": "Update the UI (H-02) to display the current application state: e.g., 'Idle', 'Listening...', 'Detected: Crying', 'Playing: White Noise', 'Detected: Calm'.",
+    "labels": ["core-loop", "ui", "high", "priority:high"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "High",
+    "estimate_hours": 0.5
+  },
+  {
+    "id": "H-09",
+    "title": "Add Manual Sound Selection/Playback Buttons",
+    "description": "(Refinement) Add a couple of buttons to the UI to manually trigger playback of specific sound files (e.g., 'Play White Noise', 'Play Lullaby').",
+    "labels": ["refinement", "ui", "audio", "medium", "priority:medium"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Medium",
+    "estimate_hours": 1.0
+  },
+  {
+    "id": "H-10",
+    "title": "Add Basic Volume Control Slider (In-App)",
+    "description": "(Refinement) Add a slider to the UI to control the playback volume of the sounds played by the application (H-04).",
+    "labels": ["refinement", "ui", "audio", "medium", "priority:medium"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Medium",
+    "estimate_hours": 0.5
+  },
+  {
+    "id": "H-11",
+    "title": "Package/Prepare for Demo",
+    "description": "Ensure the prototype runs smoothly from a clean state. Create simple run instructions if needed. Final code cleanup/commenting.",
+    "labels": ["demo", "packaging", "high", "priority:high"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "High",
+    "estimate_hours": 0.5
+  },
+  {
+    "id": "H-12",
+    "title": "Integrate a *pre-trained* simple audio classifier",
+    "description": "(Stretch Goal) If a suitable lightweight, pre-trained audio classification model (e.g., for basic commands or environmental sounds) is found *quickly*, attempt to integrate it instead of the simplified rule-based logic (H-05). High risk for hackathon.",
+    "labels": ["stretch-goal", "ai", "low", "priority:low"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Low",
+    "estimate_hours": 2.0
+  },
+  {
+    "id": "H-13",
+    "title": "Add Timer Functionality",
+    "description": "(Stretch Goal) Add a simple timer to automatically stop playback after a set duration.",
+    "labels": ["stretch-goal", "feature", "low", "priority:low"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Low",
+    "estimate_hours": 1.0
+  },
+  {
+    "id": "H-14",
+    "title": "Save/Load Basic Settings (Volume)",
+    "description": "(Stretch Goal) Persist the volume setting (H-10) locally so it's remembered between app launches.",
+    "labels": ["stretch-goal", "feature", "low", "priority:low"],
+    "assignees": [],
+    "status": "To Do",
+    "priority": "Low",
+    "estimate_hours": 0.5
+  }
+]
