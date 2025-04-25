@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BabySoothe-AI- Web MVP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BabySoothe-AI- Web MVP</h1>
+        <div id="status">Status: Idle</div>
+        <div id="controls">
+            <button id="listen-btn">Start Listening</button>
+        </div>
+        <div id="manual-controls" style="margin-top: 1em;">
+            <button id="play-white-noise">Play White Noise</button>
+            <button id="play-lullaby">Play Lullaby</button>
+        </div>
+        <div id="volume-container">
+            <label for="volume-bar">Volume:</label>
+            <progress id="volume-bar" value="0" max="1"></progress>
+            <span id="volume-value">0.00</span>
+        </div>
+        <div id="mood">Mood: Unknown</div>
+        <div id="sound-status" style="margin-bottom:8px; color:#4f8cff; font-size:1em;">Sound: None</div>
+        <canvas id="waveform-canvas" width="300" height="60" style="display:block; margin: 12px auto 12px auto; background:#f0f3fa; border-radius:8px;"></canvas>
+        <div style="margin: 12px auto;">
+            <select id="sound-selector" style="padding:4px 8px;">
+                <option value="sounds/lullaby.mp3">Lullaby</option>
+                <option value="sounds/white_noise.mp3">White Noise</option>
+                <option value="sounds/soothing.mp3">Soothing</option>
+            </select>
+            <button id="play-selected-btn" style="margin-left:8px;">Play Selected Sound</button>
+        </div>
+        <audio id="audio-lullaby" src="sounds/lullaby.mp3"></audio>
+        <audio id="audio-white-noise" src="sounds/white_noise.mp3"></audio>
+        <audio id="audio-soothing" src="sounds/soothing.mp3"></audio>
+        <div id="error-message"></div>
+    </div>
+    <!-- TensorFlow.js (ML) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js"></script>
+    <!-- YAMNet model loader (browser port) -->
+    <script src="https://cdn.jsdelivr.net/npm/yamnet/dist/yamnet.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

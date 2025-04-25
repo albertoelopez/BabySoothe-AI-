@@ -1,0 +1,4 @@
+pyqt6>=6.0.0
+sounddevice>=0.4.0
+soundfile>=0.10.3
+numpy>=1.20.0
