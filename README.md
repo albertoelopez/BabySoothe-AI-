@@ -1,4 +1,6 @@
 # BabySoothe AI - Desktop Hackathon MVP
+<video src="https://drive.google.com/file/d/1QK3HllJHI51-Omz8SNjG9MysLgsXFAll/view?usp=drive_link" controls width="640" height="360"></video>
+
 
 ![Baby Icon Placeholder](https://via.placeholder.com/100x100.png?text=BabySootheAI) <!-- Replace with a real logo/icon if you have one -->
 
